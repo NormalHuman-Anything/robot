@@ -13,23 +13,23 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  leg1(-10, 0);
+  leg1(-30, 0);
   leg4(30, 0);
   delay(500);
 
-  leg4(30, 30);
+  leg4(4x 0, 30);
   delay(500);
 
   leg1(0, 0);
   leg4(0, 30);
   delay(500);
 
-  leg4(-10, 30);
-  leg1(30, 30);
+  leg4(-30, 30);
+  leg1(40, 30);
   delay(500);
 
-  leg3(-10, 0);
-  leg6(30, 0);
+  leg3(-30, 0);
+  leg6(40, 0);
   delay(500);
 
   leg6(30, 30);
