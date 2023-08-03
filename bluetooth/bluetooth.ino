@@ -3,6 +3,14 @@
 void setup() {
  Serial1.begin(9600);  //Serial1 == 18 19번핀 --> Bluetooth module 과 arduino 와의 시리얼 통신
  Serial.begin(9600);
+ setservos();
+  leg1(0, 0);
+  leg2(0, 0);
+  leg3(0, 0);
+  leg4(0, 0);
+  leg5(0, 0);
+  leg6(0, 0);
+  delay(2000);
 }
 
 
