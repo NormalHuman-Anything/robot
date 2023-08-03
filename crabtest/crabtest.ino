@@ -22,7 +22,12 @@ void loop() {
 
     switch(num){
       
-      case '1': //명령 대기 상태
+      case '0': //명령 대기 상태
+        stand();
+        num = '1';
+        break;
+
+      case '1': //후진
         unwalk();
         num = '1';
         break;
@@ -37,18 +42,38 @@ void loop() {
         num = '1';
         break;   
       
-      case '4':
+      case '4': //우회전
         turnl();
         num = '1';
         break;   
         
-      case '5':
+      case '5': //춤
         dance();
         num = '1';
         break;
 
-      case '6':
+      case '6': //춤
         dance2();
+        num = '1';
+        break;
+
+      case '7': //"그" 자세
+        high();
+        num = '1';
+        break;
+
+      case '8': //춤
+        dance3();
+        num = '1';
+        break;
+
+      case '9': //1번다리킥
+        leg1kick();
+        num = '1';
+        break;
+
+      case '10': //6번다리킥
+        leg6kick();
         num = '1';
         break;
 
@@ -126,7 +151,7 @@ void dance(){//wave
   leg6(0, 0);
 }
 
-void dance2(){//crab dance
+void dance2(){//handwave
   leg1(0, 0);
   leg2(0, 0);
   leg3(0, 0);
@@ -135,53 +160,79 @@ void dance2(){//crab dance
   leg6(0, 0);//초기화
   delay(00);
 
-  kickleg2(-90, 50, 0);
-  kickleg5(90, 50, 0);
-  delay(150);
+  kickleg2(-120, 50, 0);
+  kickleg5(120, 50, 0);
+  delay(200);
 
   leg2(0, 0);
   leg5(0, 0);
-  delay(150);
+  delay(200);
 
-  kickleg3(-90, 50, 0);
-  kickleg6(90, 50, 0);
-  delay(150);
+  kickleg3(-120, 50, 0);
+  kickleg6(120, 50, 0);
+  delay(200);
 
   leg3(0, 0);
   leg6(0, 0);
-  delay(150);
+  delay(200);
 
-  kickleg4(90, 50, 0);
-  kickleg1(-90, 50, 0);
-  delay(150);
+  kickleg4(120, 50, 0);
+  kickleg1(-120, 50, 0);
+  delay(200);
 
   leg4(0, 0);
   leg1(0, 0);
-  delay(150);
+  delay(200);
 
-  kickleg5(90, 50, 0);
-  kickleg2(-90, 50, 0);
-  delay(150);
+  kickleg5(120, 50, 0);
+  kickleg2(-120, 50, 0);
+  delay(200);
 
   leg5(0, 0);
   leg2(0, 0);
-  delay(150);
+  delay(200);
 
-  kickleg3(-90, 50, 0);
-  kickleg6(90, 50, 0);
-  delay(150);
+  kickleg3(-120, 50, 0);
+  kickleg6(120, 50, 0);
+  delay(200);
 
   leg3(0, 0);
   leg6(0, 0);
-  delay(150);
+  delay(200);
 
-  kickleg4(90, 50, 0);
-  kickleg1(-90, 50, 0);
-  delay(150);
+  kickleg4(120, 50, 0);
+  kickleg1(-120, 50, 0);
+  delay(200);
 
   leg4(0, 0);
   leg1(0, 0);
-  delay(150);
+  delay(200);
+}
+
+void high(){//random shit
+  kickleg1(-180, 90, 30);
+  delay(800);
+  kickleg1(-180, 90, 0);
+  delay(800);
+  kickleg1(0, 0, 0);
+}
+
+void dance3(){//useless
+  leg1(-40, 0);
+  leg3(-40, 0);
+  leg5(-40, 0);
+  leg2(-40, 0);
+  leg4(-40, 0);
+  leg6(-40, 0);
+  delay(100);
+
+  leg1(40, 0);
+  leg3(40, 0);
+  leg5(40, 0);
+  leg2(40, 0);
+  leg4(40, 0);
+  leg6(40, 0);
+  delay(10);
 }
 
 void stand(){
@@ -193,7 +244,7 @@ void stand(){
   leg6(0, 0);
 }
 
-void unwalk(){
+void unwalk(){//"un" walk
   leg1(-20, 0);
   leg3(-20, 30);
   leg5(-20, 17);
@@ -227,48 +278,48 @@ void unwalk(){
   delay(200);
 }
 
-void walk(){
-  leg1(-20, -30);
-  leg3(-20, 0);
-  leg5(-20, -17);
-  leg2(30, 15);
-  leg4(30, 32);
-  leg6(30, 2);
-  delay(200);
+void walk(){//walk forwards
+  leg1(-30, -30);
+  leg3(-30, 0);
+  leg5(-30, -17);
+  leg2(40, 15);
+  leg4(40, 32);
+  leg6(40, 2);
+  delay(250);
 
-  leg1(-20, -30);
-  leg3(-20, 0);
-  leg5(-20, -17);
-  leg2(-20, 15);
-  leg4(-20, 32);
-  leg6(-20, 2);
-  delay(200);
+  leg1(-30, -30);
+  leg3(-30, 0);
+  leg5(-30, -17);
+  leg2(-30, 15);
+  leg4(-30, 32);
+  leg6(-30, 2);
+  delay(250);
 
-  leg1(30, 0);
-  leg3(30, 30);
-  leg5(30, 17);
-  leg2(-20, -15);
-  leg4(-20, -2);
-  leg6(-20, -32);
-  delay(200);
+  leg1(40, 0);
+  leg3(40, 30);
+  leg5(40, 17);
+  leg2(-30, -15);
+  leg4(-30, -2);
+  leg6(-30, -32);
+  delay(250);
 
-  leg1(-20, 0);
-  leg3(-20, 30);
-  leg5(-20, 17);
-  leg2(-20, -15);
-  leg4(-20, -2);
-  leg6(-20, -32);
-  delay(200);
+  leg1(-30, 0);
+  leg3(-30, 30);
+  leg5(-30, 17);
+  leg2(-30, -15);
+  leg4(-30, -2);
+  leg6(-30, -32);
+  delay(250);
 }
 
-void turn(){
+void turn (){//turn right
   leg1(-20, 15);
   leg3(-20, 15);
   leg5(-20, -15);
   leg2(30, -15);
   leg4(30, 15);
   leg6(30, 15);
-  delay(100);
+  delay(200);
 
   leg1(-20, 15);
   leg3(-20, 15);
@@ -276,7 +327,7 @@ void turn(){
   leg2(-20, -15);
   leg4(-20, 15);
   leg6(-20, 15);
-  delay(100);
+  delay(200);
 
   leg1(30, -15);
   leg3(30, -15);
@@ -296,7 +347,7 @@ void turn(){
   
 }
 
-void turnl(){
+void turnl(){//turn left
   leg1(-20, -15);
   leg3(-20, -15);
   leg5(-20, 15);
@@ -328,4 +379,104 @@ void turnl(){
   leg4(30, 15);
   leg6(30, 15);
   delay(100);
+}
+
+void leg1kick(){
+  kickleg1(-80,0,-30);
+  leg2(0, 0);
+  leg3(0, 0);
+  leg4(0, 0);
+  leg5(0, 0);
+  leg6(0, 0);
+  delay(1000);
+
+  kickleg1(-80,0,20);
+  leg2(0, -50);
+  leg3(0, -50);
+  leg4(0, 50);
+  leg5(0, 50);
+  leg6(0, 50);
+  delay(1000);
+
+  leg1(30, 0);
+  leg3(30, 0);
+  leg5(30, 0);
+  leg2(0, -50);
+  leg4(0, 50);
+  leg6(0, 50);
+  delay(500);
+
+  leg1(0, 0);
+  leg3(0, 0);
+  leg5(0, 0);
+  leg2(0, -50);
+  leg4(0, 50);
+  leg6(0, 50);
+  delay(500);
+
+  leg1(0, 0);
+  leg3(0, 0);
+  leg5(0, 0);
+  leg2(30, 0);
+  leg4(30, 0);
+  leg6(30, 0);
+  delay(500);
+
+  leg1(0, 0);
+  leg3(0, 0);
+  leg5(0, 0);
+  leg2(0, 0);
+  leg4(0, 0);
+  leg6(0, 0);
+  delay(500);
+}
+
+void leg6kick(){
+  leg1(0, 0);
+  leg2(0, 0);
+  leg3(0, 0);
+  leg4(0, 0);
+  leg5(0, 0);
+  kickleg6(80, 0, -30);
+  delay(1000);
+
+  leg1(0, 50);
+  leg2(0, 50);
+  leg3(0, 50);
+  leg4(0, -50);
+  leg5(0, -50);
+  kickleg6(80, 0, 20);
+  delay(1000);
+
+  leg1(0, 50);
+  leg3(0, 50);
+  leg5(0, 50);
+  leg2(30, 0);
+  leg4(30, 0);
+  leg6(30, 0);
+  delay(500);
+
+  leg1(0, 50);
+  leg3(0, 50);
+  leg5(0, 50);
+  leg2(0, 0);
+  leg4(0, 0);
+  leg6(0, 0);
+  delay(500);
+
+  leg1(30, 0);
+  leg3(30, 0);
+  leg5(30, 0);
+  leg2(0, 0);
+  leg4(0, 0);
+  leg6(0, 0);
+  delay(500);
+
+  leg1(0, 0);
+  leg3(0, 0);
+  leg5(0, 0);
+  leg2(0, 0);
+  leg4(0, 0);
+  leg6(0, 0);
+  delay(500);
 }
