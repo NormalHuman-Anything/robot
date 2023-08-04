@@ -38,6 +38,7 @@ int field[31][31] = {
 
 void setup() {
   // put your setup code here, to run once:
+  setservos();
   leg1(0, 0);
   leg2(0, 0);
   leg3(0, 0);
